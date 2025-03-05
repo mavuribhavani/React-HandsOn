@@ -1,0 +1,19 @@
+.app-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 50px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .preview {
+    font-size: 22px;
+    color: rgb(75, 130, 203);
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
