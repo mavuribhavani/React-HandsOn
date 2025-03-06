@@ -5,27 +5,33 @@ import phoneImg from "../assets/phone.jpeg";
 import headphonesImg from "../assets/headphones.jpeg";
 import "./EcomStyles.css";
 
-const ProductCatalogue = () => {
+const ProductCatalogue = ({ cart, setCart }) => {
   const products = [
-    { name: "Laptop", price: "$999", image: laptopImg },
-    
-    { name: "Phone", price: "$699", image: phoneImg },
-    { name: "Headphones", price: "$199", image: headphonesImg }
+    { id: 1, name: "Laptop", price: 90000, image: laptopImg },
+    { id: 2, name: "Phone", price: 60000, image: phoneImg },
+    { id: 3, name: "Headphones", price: 50000, image: headphonesImg }
   ];
+
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
 
   return (
     <div className="product-container">
       <h2>Product Catalogue</h2>
-      <Link to="/" className="logout-btn">Logout</Link>
+      <div>
+        <Link to="/" className="logout-btn" style={{ marginRight: "20px" }}>Logout</Link>
+        <Link to="/cart" className="cart-btn">Go to Cart ({cart.length})</Link>
+    
+      </div>
 
       <div className="product-list">
-        {products.map((product, index) => (
-          <div key={index}>
-            <div className="product">
-              <img src={product.image} alt={product.name} />
-              <p>{product.name}</p>
-            </div>
-            <p className="product-price">{product.price}</p> {/* Price outside box */}
+        {products.map((product) => (
+          <div key={product.id} className="product">
+            <img src={product.image} alt={product.name} />
+            <p>{product.name}</p>
+            <p className="product-price">₹{product.price}</p>
+            <button onClick={() => addToCart(product)} className="add-to-cart-btn">Add to Cart</button>
           </div>
         ))}
       </div>

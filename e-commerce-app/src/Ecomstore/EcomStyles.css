@@ -1,74 +1,72 @@
-/* Center align all content */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Cart Page */
+.cart-container {
     text-align: center;
-    background-color: #f4f4f4;
+    margin: 30px;
 }
 
-/* Logout Button */
-.logout-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: red;
-    color: white;
-    text-decoration: none;
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.cart-item img {
+    width: 50px;
+    border-radius: 5px;
+}
+
+.remove-btn, .checkout-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
 }
 
-.logout-btn:hover {
-    background-color: darkred;
+.remove-btn {
+    background-color: red;
+    color: white;
 }
 
-/* Product Page */
-.product-container {
-    margin-top: 30px;
+.checkout-btn {
+    background-color: green;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Payment Page */
+.payment-container {
+    text-align: center;
+    margin-top: 50px;
     padding: 20px;
     background: white;
-    width: 60%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Product List */
-.product-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-/* Product Box */
-.product {
+.payment-container input {
+    display: block;
+    width: 80%;
+    padding: 8px;
+    margin: 10px auto;
     border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 8px;
-    width: 200px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 4px;
 }
 
-.product img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.product p {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Price Styling (Outside Box) */
-.product-price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #007bff;
-    margin-top: 8px;
+.pay-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
