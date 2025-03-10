@@ -1,0 +1,48 @@
+/* Keep the navigation bar fixed at the top */
+nav {
+    background-color: #8b76dd;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed; /* Fix position at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.nav-links li a:hover {
+    color: #17a2b8;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;  
+    min-height: 100vh; /* Ensure full height */
+    text-align: center;
+    padding-top: 80px; /* Offset to prevent overlap with navbar */
+}
